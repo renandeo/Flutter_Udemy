@@ -10,6 +10,7 @@ void main() async {
   print(await getData());
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
         hintColor: Colors.amber,
@@ -85,7 +86,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text("\$ Conversor de moedas \$"),
+        title: Text("CONVERSOR DE MOEDAS"),
         backgroundColor: Colors.amber,
         centerTitle: true,
       ),
@@ -130,7 +131,7 @@ class _HomeState extends State<Home> {
                             "Dólares", "USS", dolarController, _dolarChanged),
                         Divider(),
                         buildTextField(
-                            "Euros", "\$", euroController, _euroChanged),
+                            "Euros", "€", euroController, _euroChanged),
                       ],
                     ),
                   ),
